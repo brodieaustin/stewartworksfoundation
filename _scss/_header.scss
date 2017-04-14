@@ -1,0 +1,18 @@
+.site-header{
+  background-color: $primary-color;
+
+  .container{
+    margin-top: 0;
+  }
+}
+
+
+.brand{
+  display: inline-block;
+  font-family: $primary-font-family;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  line-height: 1.1;
+  letter-spacing: 1.5px;
+  color: $white;
+}

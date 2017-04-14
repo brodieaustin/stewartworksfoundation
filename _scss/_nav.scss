@@ -1,0 +1,37 @@
+.site-nav{
+  margin-top: 1rem;
+
+  @media screen and (#{$bp-larger-than-desktop}){
+    float: right;
+    margin-top: 0;
+    margin-left: 0;
+    vertical-align: middle;
+  }
+}
+
+.nav{
+  @include unstyled-list;
+
+  li{
+    display: inline-block;
+  }
+
+  a{
+    display: block;
+    margin-right: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: $primary-font-family;
+    color: $white;
+
+
+    &.active{
+      color: darken($primary-color, 40%);
+    }
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      margin-left: 2rem;
+      margin-right: 0;
+    }
+  }
+}

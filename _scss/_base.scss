@@ -1,0 +1,78 @@
+*, *:before, *:after{
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  height: 100%;
+  margin: 0 auto;
+  padding: 0;
+  background: $white;
+  font: 16px/1.6 $primary-font-family;
+}
+
+h1, h2, h3, h4, h5, h6{
+  margin-bottom: .125rem;
+  font-weight: 400;
+  font-family: $secondary-font-family;
+  line-height: 1.4;
+  color: $primary-color;
+}
+
+p{
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+}
+
+a{
+  color: darken($primary-color, 10%);
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity .2s ease;
+
+  &:hover{
+    opacity: .7;
+  }
+
+}
+
+/*utility classes*/
+
+.hidden{
+  position: absolute !important;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+.more{
+  &:after{
+    content: "\2192";
+  }
+}
+
+@mixin unstyled-list(){
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.flex-video {
+  position: relative;
+  padding-top: 1.5625rem;
+  padding-bottom: 67.5%;
+  height: 0;
+  margin-bottom: 1rem;
+  overflow: hidden;
+
+  iframe{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}

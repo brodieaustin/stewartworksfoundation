@@ -1,0 +1,45 @@
+.page-content{
+  header{
+
+    .container{
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+
+    h1{
+      display: inline-block;
+      margin: 0;
+      border-bottom: 3px solid $primary-color;
+      color: $primary-color;
+    }
+  }
+
+  > .container{
+    padding-top: .875rem;
+    padding-bottom: 0;
+  }
+}
+
+.page-section{
+  max-width: 34rem;
+  margin-bottom: 2rem;
+
+  h2{
+    text-transform: uppercase;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  h3{
+    //color: $dark-grey;
+  }
+
+  p{
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}

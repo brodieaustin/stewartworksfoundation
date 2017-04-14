@@ -1,0 +1,3 @@
+title: "StewARTWorks Foundation"
+baseurl: "/stewartworksfoundation"
+exclude: ['node_modules', '_scss', 'gulpfile.js', 'package.json']

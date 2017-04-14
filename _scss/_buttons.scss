@@ -1,0 +1,39 @@
+.button{
+  display: inline-block;
+  padding: .5rem 1.25rem;
+  border: 0;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-family: $secondary-font-family;
+  font-size: .75rem;
+  text-transform: uppercase;
+  transition: opacity .2s ease;
+
+  &.more{
+    display: block;
+    width: 40%;
+    margin: 2rem auto;
+    background: $primary-color;
+    text-align: center;
+    color: $font-color;
+  }
+
+  &:hover{
+    opacity: .7;
+  }
+
+  &.border{
+    background: transparent;
+    border: 2px solid $primary-color;
+    color: $primary-color;
+  }
+
+  &.solid{
+    background: $primary-color;
+    color: $white;
+  }
+
+  &.disabled{
+    background: transparent !important;
+  }
+}
