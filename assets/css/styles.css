@@ -563,21 +563,23 @@ a {
   background-repeat: no-repeat;
   background-size: cover; }
   .hero .container {
-    height: 18rem;
     margin-top: -2rem;
     overflow: visible; }
-    @media screen and (min-width: 1140px) {
+    @media screen and (min-width: 850px) {
       .hero .container {
-        height: 23rem; } }
+        height: 24rem; } }
   .hero .hero-cta {
-    position: absolute;
-    bottom: -2rem;
-    right: 2rem;
-    width: 30rem;
+    margin: auto;
     padding: 2rem;
     background-color: #3087C6;
     color: #fff;
     font-weight: 300; }
+    @media screen and (min-width: 850px) {
+      .hero .hero-cta {
+        position: absolute;
+        bottom: -2rem;
+        right: 2rem;
+        width: 30rem; } }
     .hero .hero-cta p {
       font-size: 1.875rem;
       line-height: 1.2;
@@ -610,8 +612,9 @@ a {
   margin: 0;
   font-size: 3rem; }
 
-.page-content header p {
-  max-width: 60%; }
+@media screen and (min-width: 850px) {
+  .page-content header p {
+    max-width: 60%; } }
 
 .page-content > .container {
   padding-top: .875rem;
@@ -627,9 +630,6 @@ a {
   .page-section p:last-child {
     margin-bottom: 0; }
 
-.gallery-header {
-  max-width: 40rem; }
-
 .gallery-images {
   list-style: none;
   margin-top: 2rem;
@@ -637,14 +637,18 @@ a {
   padding: 0; }
   .gallery-images li {
     display: inline-block;
-    width: calc(49% - 2rem);
-    height: 12rem;
+    width: calc(100% - 2rem);
+    height: 14rem;
     margin-bottom: 2rem;
     margin-left: 2rem;
     overflow: hidden;
     transition: .2s ease opacity;
     cursor: pointer; }
-    @media screen and (min-width: 40rem) {
+    @media screen and (min-width: 550px) {
+      .gallery-images li {
+        width: calc(49% - 2rem);
+        height: 12rem; } }
+    @media screen and (min-width: 1140px) {
       .gallery-images li {
         width: calc(33% - 2rem); } }
     .gallery-images li:hover {
@@ -655,16 +659,24 @@ a {
 
 .content-wrapper {
   display: -ms-flexbox;
-  display: flex; }
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap; }
   .content-wrapper .image {
-    width: 40%;
-    margin-right: 2rem; }
+    width: 100%; }
+    @media screen and (min-width: 850px) {
+      .content-wrapper .image {
+        width: 40%; } }
     .content-wrapper .image img {
       max-width: 100%;
       height: auto; }
   .content-wrapper .text {
-    width: calc(60% - 2rem);
+    width: 100%;
     padding-bottom: 2rem; }
+    @media screen and (min-width: 850px) {
+      .content-wrapper .text {
+        width: calc(60% - 2rem);
+        margin-left: 2rem; } }
 
 .gridder-show {
   position: relative;
