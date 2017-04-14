@@ -1,0 +1,33 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/assets/js/jquery.gridder.min.js"></script>
+  <script>
+    $(function() {
+
+      // Call Gridder
+      $('.gridder').gridderExpander({
+          scroll: true,
+          scrollOffset: 30,
+          scrollTo: "panel",                  // panel or listitem
+          animationSpeed: 400,
+          animationEasing: "easeInOutExpo",
+          showNav: true,                      // Show Navigation
+          nextText: "next",                   // Next button text
+          prevText: "prev",               // Previous button text
+          closeText: "&times;",                 // Close button text
+          onStart: function(){
+              //Gridder Inititialized
+          },
+          onContent: function(){
+              //Gridder Content Loaded
+              var url = $('.selectedItem').attr('data-griddercontent');
+              url = url.replace('#', '') + '/';
+              history.pushState(null, null, url);
+          },
+          onClosed: function(){
+              //Gridder Closed
+              history.pushState(null, null, '/gallery/');
+          }
+      });
+
+    });
+  </script>

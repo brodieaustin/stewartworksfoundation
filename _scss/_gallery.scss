@@ -1,0 +1,53 @@
+.gallery-header{
+  max-width: 40rem;
+}
+
+.gallery-images{
+  list-style: none;
+  margin-top: 2rem;
+  margin-left: -2rem;
+  padding: 0;
+
+  li{
+    display: inline-block;
+    width: calc(49% - 2rem);
+    height: 12rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    overflow: hidden;
+    transition: .2s ease opacity;
+    cursor: pointer;
+
+    @media screen and (min-width: 40rem){
+      width: calc(33% - 2rem);
+    }
+
+    &:hover{
+      opacity: .6;
+    }
+  }
+
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.content-wrapper{
+  display: flex;
+
+  .image{
+    width: 40%;
+    margin-right: 2rem;
+
+    img{
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .text{
+    width: calc(60% - 2rem);
+    padding-bottom: 2rem;
+  }
+}

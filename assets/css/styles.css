@@ -386,8 +386,12 @@ body {
 h1, h2, h3, h4, h5, h6 {
   margin-bottom: .125rem;
   font-weight: 400;
-  font-family: "Oswald", sans-serif;
-  line-height: 1.4;
+  line-height: 1.4; }
+
+h1 {
+  font-family: "Oswald", sans-serif; }
+
+h2, h3, h4, h5, h6 {
   color: #3087C6; }
 
 p {
@@ -511,7 +515,8 @@ a {
 .site-footer {
   padding-bottom: 2rem; }
   .site-footer .brand {
-    font-size: 1.125rem; }
+    font-size: 1.125rem;
+    color: #333; }
 
 @media screen and (min-width: 850px) {
   .contact {
@@ -553,6 +558,49 @@ a {
   .social svg {
     fill: #fff; }
 
+.hero {
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .hero .container {
+    height: 18rem;
+    margin-top: -2rem;
+    overflow: visible; }
+    @media screen and (min-width: 1140px) {
+      .hero .container {
+        height: 23rem; } }
+  .hero .hero-cta {
+    position: absolute;
+    bottom: -2rem;
+    right: 2rem;
+    width: 30rem;
+    padding: 2rem;
+    background-color: #3087C6;
+    color: #fff;
+    font-weight: 300; }
+    .hero .hero-cta p {
+      font-size: 1.875rem;
+      line-height: 1.2;
+      letter-spacing: 1px; }
+    .hero .hero-cta a {
+      color: #fff;
+      text-transform: uppercase;
+      font-size: .875rem;
+      letter-spacing: 1px; }
+      .hero .hero-cta a:after {
+        content: '\25b6\25b6\25b6';
+        display: inline-block;
+        margin-left: .325rem;
+        font-size: 70%;
+        vertical-align: middle; }
+  .hero .hero-caption {
+    position: absolute;
+    bottom: -1.5rem;
+    left: 2rem;
+    font-size: .8125rem;
+    font-style: italic;
+    color: #9797A4; }
+
 .page-content header .container {
   padding-top: 2rem;
   padding-bottom: 1rem; }
@@ -560,8 +608,10 @@ a {
 .page-content header h1 {
   display: inline-block;
   margin: 0;
-  border-bottom: 3px solid #3087C6;
-  color: #3087C6; }
+  font-size: 3rem; }
+
+.page-content header p {
+  max-width: 60%; }
 
 .page-content > .container {
   padding-top: .875rem;
@@ -576,3 +626,112 @@ a {
       margin-top: 0; }
   .page-section p:last-child {
     margin-bottom: 0; }
+
+.gallery-header {
+  max-width: 40rem; }
+
+.gallery-images {
+  list-style: none;
+  margin-top: 2rem;
+  margin-left: -2rem;
+  padding: 0; }
+  .gallery-images li {
+    display: inline-block;
+    width: calc(49% - 2rem);
+    height: 12rem;
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    overflow: hidden;
+    transition: .2s ease opacity;
+    cursor: pointer; }
+    @media screen and (min-width: 40rem) {
+      .gallery-images li {
+        width: calc(33% - 2rem); } }
+    .gallery-images li:hover {
+      opacity: .6; }
+  .gallery-images img {
+    width: 100%;
+    height: auto; }
+
+.content-wrapper {
+  display: -ms-flexbox;
+  display: flex; }
+  .content-wrapper .image {
+    width: 40%;
+    margin-right: 2rem; }
+    .content-wrapper .image img {
+      max-width: 100%;
+      height: auto; }
+  .content-wrapper .text {
+    width: calc(60% - 2rem);
+    padding-bottom: 2rem; }
+
+.gridder-show {
+  position: relative;
+  float: left;
+  width: calc(100% - 2rem);
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  text-align: left; }
+
+.gallery-images.hasSelectedItem li {
+  opacity: .2; }
+
+.gallery-images .selectedItem {
+  opacity: 1 !important; }
+
+.gridder-navigation a {
+  text-decoration: none;
+  color: #888;
+  transition: .2s ease opacity; }
+
+.gridder-navigation a:hover {
+  opacity: .7; }
+
+.gridder-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 1.5rem; }
+
+.gridder-nav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  font-size: .75rem;
+  letter-spacing: 1px; }
+  .gridder-nav.next {
+    text-transform: uppercase; }
+    .gridder-nav.next:after {
+      content: '\25b6';
+      display: inline-block;
+      margin-left: .25rem;
+      font-size: 80%; }
+  .gridder-nav.prev {
+    right: 5rem;
+    text-transform: uppercase; }
+    .gridder-nav.prev:before {
+      content: '\25C0';
+      display: inline-block;
+      margin-right: .25rem;
+      font-size: 80%; }
+
+.gridder-content {
+  display: none; }
+
+.pager {
+  text-align: center; }
+
+.page-control {
+  margin: 0 .5rem 1rem;
+  background: #3087C6;
+  color: #fff;
+  border: 0; }
+  .page-control.disabled {
+    background: #f5f5f5;
+    color: #9797A4;
+    border: 0; }
+
+.page-range {
+  color: #9797A4;
+  font-size: .875rem; }

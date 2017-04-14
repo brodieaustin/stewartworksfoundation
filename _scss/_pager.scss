@@ -1,0 +1,21 @@
+.pager{
+  text-align: center;
+}
+
+.page-control{
+  margin: 0 .5rem 1rem;
+  background: $primary-color;
+  color: $white;
+  border: 0;
+
+  &.disabled{
+    background: $light-grey;
+    color: $dark-grey;
+    border: 0;
+  }
+}
+
+.page-range{
+  color: $dark-grey;
+  font-size: .875rem;
+}

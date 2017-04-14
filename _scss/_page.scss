@@ -9,8 +9,11 @@
     h1{
       display: inline-block;
       margin: 0;
-      border-bottom: 3px solid $primary-color;
-      color: $primary-color;
+      font-size: 3rem;
+    }
+
+    p{
+      max-width: 60%;
     }
   }
 
