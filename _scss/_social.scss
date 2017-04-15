@@ -23,3 +23,39 @@
     fill: $white;
   }
 }
+
+.share{
+  height: 1.5rem;
+  width: 1.5rem;
+  padding: 0;
+  background: $dark-grey;
+  border: 0;
+  border-radius: 50%;
+
+  svg{
+    width: 100%;
+    height: auto;
+    fill: $white;
+  }
+}
+
+.share-buttons{
+
+  @media (#{$bp-larger-than-tablet}) {
+    position: absolute;
+    top: 3.5rem;
+    right: 2rem;
+  }
+
+  @media (#{$bp-larger-than-desktop}) {
+    right: 0;
+  }
+
+  .share{
+    margin: 0 .5rem 0 0;
+
+    @media (#{$bp-larger-than-phablet}) {
+      margin: 0 0 0 .5rem;
+    }
+  }
+}

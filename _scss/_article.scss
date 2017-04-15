@@ -1,0 +1,61 @@
+.article {
+
+  .container{
+    @media screen and (#{$bp-larger-than-tablet}){
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .article-content{
+    margin-top: 1rem;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: 65%;
+    }
+
+  }
+
+  .article-aside{
+    margin-top: 2rem;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: calc(35% - 2rem);
+      margin-left: 2rem;
+    }
+  }
+
+}
+
+.article-meta{
+  margin-bottom: 1rem;
+  font-size: .875rem;
+  color: $dark-grey;
+}
+
+.article-aside{
+
+  h3{
+    text-transform: uppercase;
+    letter-space: 1px;
+
+    &:first-child{
+      margin-top: 0;
+    }
+  }
+
+  ul{
+    @include unstyled-list;
+    margin-bottom: 2rem;
+  }
+
+  a{
+    color: $font-color;
+  }
+}
+
+.related-resources{
+  li{
+    margin-bottom: .5rem;
+  }
+}

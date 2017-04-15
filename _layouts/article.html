@@ -1,0 +1,32 @@
+---
+layout: base
+---
+
+<article class="page-content article">
+  <div class="container">
+    <header>
+      {% if page.section %}
+        <a href="#" class="section-label">{{ page.section }}</a>
+      {% endif %}
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}
+        <p class="page-description">{{ page.description }}</p>
+      {% endif %}
+      {% if page.meta %}
+        <p class="article-meta">{{ page.meta }}</p>
+      {% endif %}
+      <div class="share-buttons">
+        <button class="share">
+          <svg viewBox="0 0 44 44" title="Mail"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg/social-icons.svg#mail"></use></svg>
+        </button>
+        <button class="share">
+          <svg viewBox="0 0 44 44" title="Facebook"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg/social-icons.svg#facebook"></use></svg>
+        </button>
+        <button class="share">
+          <svg viewBox="0 0 44 44" title="Twitter"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="{{ site.baseurl }}/assets/svg/social-icons.svg#twitter"></use></svg>
+        </button>
+      </div>
+    </header>
+    {{ content }}
+  </div>
+</article>

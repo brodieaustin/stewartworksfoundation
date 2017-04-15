@@ -1,0 +1,20 @@
+.tags{
+  @include unstyled-list;
+  margin-bottom: 1rem;
+
+  li{
+    display: inline-block;
+    margin-right: .5rem;
+
+    a{
+      display: block;
+      margin-bottom: .75rem;
+      padding: .375rem .5rem;
+      background-color: $light-grey;
+      color: $font-color;
+      font-size: .75rem;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}

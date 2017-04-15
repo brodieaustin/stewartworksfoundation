@@ -8,11 +8,12 @@
 
     h1{
       display: inline-block;
-      margin: 0;
+      margin-top: 0;
       font-size: 3rem;
     }
 
     p{
+
       @media screen and (#{$bp-larger-than-tablet}){
         max-width: 60%;
       }
@@ -28,6 +29,8 @@
 .page-section{
   max-width: 34rem;
   margin-bottom: 2rem;
+  clear: both;
+  overflow: hidden;
 
   h2{
     text-transform: uppercase;
@@ -47,4 +50,50 @@
       margin-bottom: 0;
     }
   }
+}
+
+.section-label{
+  display: block;
+  margin-bottom: .125rem;
+  font-size: .625rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: $primary-color;
+}
+
+.page-callout{
+  margin: 0;
+  padding: 2rem;
+  background: $light-grey;
+
+  h4{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: .8125rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+
+  p{
+    font-size: .9375rem;
+
+    &:first-child{
+      margin-top: 0;
+    }
+
+    &:last-child{
+      margin-bottom:0;
+    }
+  }
+}
+
+.arrow-down{
+  float: right;
+  margin-top: 2rem;
+  margin-right: 2rem;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 3rem 4rem 0 0;
+  border-color: $light-grey transparent transparent transparent;
 }

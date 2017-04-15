@@ -5,9 +5,12 @@ layout: base
 <section class="page-content">
   <div class="container">
     <header>
+      {% if page.section %}
+        <a href="#" class="section-label">{{ page.section }}</a>
+      {% endif %}
       <h1>{{ page.title }}</h1>
       {% if page.description %}
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis turpis tempor, malesuada justo nec, aliquam neque. In ornare aliquam interdum.</p>
+        <p class="page-description">{{ page.description }}</p>
       {% endif %}
     </header>
     {{ content }}
