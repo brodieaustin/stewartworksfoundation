@@ -12,6 +12,9 @@ layout: base
       {% if page.description %}
         <p class="page-description">{{ page.description }}</p>
       {% endif %}
+      {% if page.paginated %}
+        <p class="page-range">Page 1 of 5</p>
+      {% endif %}
     </header>
     {{ content }}
   </div>

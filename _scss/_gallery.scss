@@ -1,7 +1,7 @@
 
 .gallery-images{
   list-style: none;
-  margin-top: 2rem;
+  margin-top: 1rem;
   margin-left: -2rem;
   padding: 0;
 
@@ -20,8 +20,13 @@
       height: 12rem;
     }
 
-    @media screen and (#{$bp-larger-than-desktop}){
+    @media screen and (#{$bp-larger-than-tablet}){
       width: calc(33% - 2rem);
+      height: 10rem;
+    }
+
+    @media screen and (#{$bp-larger-than-desktop}){
+      height: 12rem;
     }
 
     &:hover{

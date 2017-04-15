@@ -2,6 +2,7 @@
 title: 'Gallery'
 layout: page
 description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec quis turpis tempor, malesuada justo nec, aliquam neque. In ornare aliquam interdum.'
+paginated: true
 ---
 
 <section class="gallery">
@@ -30,6 +31,7 @@ description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec qui
           <div class="text">
             <h2>Picture</h2>
             <p>Acrylic on canvas, 61 x 51cm, May 2014</p>
+            {% include share-buttons.html %}
           </div>
         </div>
       </div>
@@ -58,6 +60,7 @@ description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec qui
           <div class="text">
             <h2>Picture</h2>
             <p>Acrylic on canvas, 61 x 51cm, May 2014</p>
+            {% include share-buttons.html %}
           </div>
         </div>
       </div>
@@ -72,6 +75,7 @@ description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec qui
           <div class="text">
             <h2>Picture</h2>
             <p>Acrylic on canvas, 61 x 51cm, May 2014</p>
+            {% include share-buttons.html %}
           </div>
         </div>
       </div>
@@ -133,9 +137,9 @@ description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec qui
       </div>
     </li>
   </ul>
-  <div class="pager">
-    <a href="#" class="button page-control prev">Prev</a>
-    <a href="#" class="button page-control next">Next</a>
+  <div class="pagination">
+    <a href="#" class="button pagination-control prev">Prev</a>
+    <a href="#" class="button pagination-control next">Next</a>
     <p class="page-range">Page 1 of 5</p>
   </div>
 </section>
