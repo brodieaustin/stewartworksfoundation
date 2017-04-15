@@ -1,0 +1,27 @@
+.resources{
+  @include unstyled-list;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -2rem;
+  }
+
+  .resource{
+    margin-top: 1rem;
+    border-top: 3px solid $primary-color;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: calc(33% - 2rem);
+      margin-left: 2rem;
+    }
+
+    h3{
+      margin-top: .5rem;
+    }
+
+    p{
+      font-size: .875rem;
+    }
+  }
+}
