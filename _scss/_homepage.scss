@@ -33,19 +33,8 @@
       letter-spacing: 1px
     }
 
-    a{
+    .cta{
       color: $white;
-      text-transform: uppercase;
-      font-size: .875rem;
-      letter-spacing: 1px;
-
-      &:after{
-        content: '\25b6\25b6\25b6';
-        display: inline-block;
-        margin-left: .325rem;
-        font-size: 70%;
-        vertical-align: middle;
-      }
     }
   }
 

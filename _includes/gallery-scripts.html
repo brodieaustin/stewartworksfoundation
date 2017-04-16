@@ -21,6 +21,7 @@
               //Gridder Content Loaded
               var url = $('.selectedItem').attr('data-griddercontent');
               url = url.replace('#', '') + '/';
+              history.pushState(null, null, '/gallery/');
               history.pushState(null, null, url);
           },
           onClosed: function(){

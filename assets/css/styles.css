@@ -432,6 +432,17 @@ a {
     width: 100%;
     height: 100%; }
 
+.cta {
+  text-transform: uppercase;
+  font-size: .875rem;
+  letter-spacing: 1px; }
+  .cta:after {
+    content: '\25b6\25b6\25b6';
+    display: inline-block;
+    margin-left: .325rem;
+    font-size: 70%;
+    vertical-align: middle; }
+
 .button {
   display: inline-block;
   padding: .5rem 1.25rem;
@@ -578,7 +589,7 @@ a {
 @media (min-width: 850px) {
   .share-buttons {
     position: absolute;
-    top: 3.5rem;
+    top: 0;
     right: 2rem; } }
 
 @media (min-width: 1140px) {
@@ -617,17 +628,8 @@ a {
       font-size: 1.875rem;
       line-height: 1.2;
       letter-spacing: 1px; }
-    .hero .hero-cta a {
-      color: #fff;
-      text-transform: uppercase;
-      font-size: .875rem;
-      letter-spacing: 1px; }
-      .hero .hero-cta a:after {
-        content: '\25b6\25b6\25b6';
-        display: inline-block;
-        margin-left: .325rem;
-        font-size: 70%;
-        vertical-align: middle; }
+    .hero .hero-cta .cta {
+      color: #fff; }
   .hero .hero-caption {
     position: absolute;
     bottom: -1.5rem;
@@ -660,6 +662,19 @@ a {
 .page-content > .container {
   padding-top: .875rem;
   padding-bottom: 0; }
+
+.page-content.illustrated > .container {
+  top: -16rem;
+  padding-top: 2rem;
+  background: #fff; }
+
+.page-illustration {
+  height: 18rem;
+  margin-top: 0;
+  border: 0;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover; }
 
 .page-section {
   max-width: 34rem;
@@ -910,14 +925,14 @@ a {
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
       margin-left: -2rem; } }
-  .resources .resource {
-    margin-top: 1rem;
-    border-top: 3px solid #3087C6; }
+  .resources .resource-preview {
+    margin: 1rem 0;
+    border-top: 3px solid #7db6df; }
     @media screen and (min-width: 850px) {
-      .resources .resource {
+      .resources .resource-preview {
         width: calc(33% - 2rem);
         margin-left: 2rem; } }
-    .resources .resource h3 {
+    .resources .resource-preview h3 {
       margin-top: .5rem; }
-    .resources .resource p {
+    .resources .resource-preview p {
       font-size: .875rem; }
