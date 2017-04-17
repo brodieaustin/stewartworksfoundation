@@ -27,10 +27,10 @@
 
 .gridder-close{
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -1px;
   padding: .5rem 1rem;
-  background-color: $white;
+  background-color: rgba($white, .8);
   font-size: 1.5rem;
 
   @media screen and (#{$bp-larger-than-tablet}){
@@ -58,8 +58,13 @@
   }
 
   &.prev{
-    right: 5rem;
+    left: 0;
     text-transform: uppercase;
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      left: auto;
+      right: 5rem;
+    }
 
     &:before{
       content: '\25C0';

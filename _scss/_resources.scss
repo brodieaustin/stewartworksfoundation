@@ -8,11 +8,11 @@
   }
 
   .resource-preview{
-    margin: 1rem 0;
-    border-top: 3px solid lighten($primary-color, 20%);
+    margin: 2rem 0;
 
     @media screen and (#{$bp-larger-than-tablet}){
-      width: calc(33% - 2rem);
+      width: calc(50% - 2rem);
+      margin-top: 0;
       margin-left: 2rem;
     }
 
@@ -21,7 +21,7 @@
     }
 
     p{
-      font-size: .875rem;
+      margin-bottom: 1rem;
     }
   }
 }

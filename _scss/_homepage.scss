@@ -4,7 +4,6 @@
   background-size: cover;
 
   .container{
-    margin-top: 0;
     overflow: visible;
 
     @media screen and (#{$bp-larger-than-tablet}){

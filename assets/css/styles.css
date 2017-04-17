@@ -396,7 +396,7 @@ h1 {
 
 h2 {
   text-transform: uppercase;
-  letter-spacing: 1px; }
+  letter-spacing: .5px; }
 
 p {
   margin-top: 0;
@@ -435,7 +435,7 @@ a {
 .cta {
   text-transform: uppercase;
   font-size: .875rem;
-  letter-spacing: 1px; }
+  letter-spacing: .5px; }
   .cta:after {
     content: '\25b6\25b6\25b6';
     display: inline-block;
@@ -476,7 +476,7 @@ a {
   position: relative;
   clear: both;
   max-width: 64rem;
-  margin: 2rem auto;
+  margin: 0 auto;
   padding: 2rem;
   overflow: hidden; }
   @media screen and (min-width: 850px) {
@@ -492,43 +492,92 @@ a {
 
 .brand {
   display: inline-block;
+  max-width: 30%;
   font-family: "Rubik", sans-serif;
   font-size: 1.25rem;
   text-transform: uppercase;
-  line-height: 1.1;
+  line-height: 1.2;
   letter-spacing: 1.5px;
   color: #fff; }
 
 .site-nav {
-  margin-top: 1rem; }
-  @media screen and (min-width: 1140px) {
+  position: fixed;
+  top: 7rem;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0 1rem;
+  background-color: #fff;
+  z-index: 999;
+  opacity: .99;
+  transition: left .2s ease-in-out; }
+  @media screen and (min-width: 850px) {
     .site-nav {
+      position: static;
       float: right;
-      margin-top: 0;
-      margin-left: 0;
-      vertical-align: middle; } }
+      width: auto;
+      height: auto;
+      padding: 0;
+      background-color: transparent;
+      border-top: 0;
+      opacity: 1; } }
+  .site-nav.open {
+    left: 0; }
 
 .nav {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  width: 80%;
+  margin: auto; }
+  @media screen and (min-width: 850px) {
+    .nav {
+      width: auto; } }
   .nav li {
-    display: inline-block; }
+    margin-bottom: 2rem;
+    text-align: center; }
+    @media screen and (min-width: 850px) {
+      .nav li {
+        display: inline-block;
+        margin-bottom: 0; } }
   .nav a {
     display: block;
-    margin-right: 1rem;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-family: "Rubik", sans-serif;
-    color: #fff; }
-    .nav a.active {
-      color: #081722; }
-    @media screen and (min-width: 1140px) {
+    color: #3087C6; }
+    @media screen and (min-width: 850px) {
       .nav a {
         margin-left: 2rem;
-        margin-right: 0; } }
+        color: #fff; } }
+    .nav a.active {
+      color: #f5f5f5; }
+
+.site-nav-control {
+  position: absolute;
+  top: 2rem;
+  right: 1rem;
+  display: inline-block;
+  float: right;
+  height: auto;
+  padding: .375rem 1rem;
+  color: #fff;
+  background: #3087C6;
+  border-color: transparent;
+  font-family: "Oswald", sans-serif;
+  font-size: 1.5rem; }
+  @media screen and (min-width: 850px) {
+    .site-nav-control {
+      display: none; } }
+
+.open-site-nav:before {
+  content: '\2630'; }
+
+.close-site-nav:before {
+  content: '\00D7'; }
 
 .site-footer {
+  margin-top: 4rem;
   padding-bottom: 2rem; }
   .site-footer .brand {
     font-size: 1.125rem;
@@ -607,7 +656,6 @@ a {
   background-repeat: no-repeat;
   background-size: cover; }
   .hero .container {
-    margin-top: 0;
     overflow: visible; }
     @media screen and (min-width: 850px) {
       .hero .container {
@@ -638,39 +686,40 @@ a {
     font-style: italic;
     color: #9797A4; }
 
-.page-content header {
-  position: relative;
-  width: 100%; }
-  .page-content header .container {
-    padding-top: 2rem;
-    padding-bottom: 1rem; }
-  .page-content header h1 {
-    display: inline-block;
-    margin-top: 0;
-    font-size: 3rem; }
-  @media screen and (min-width: 850px) {
-    .page-content header p {
-      max-width: 60%; } }
-  .page-content header .page-range {
-    margin-bottom: 0; }
-    @media screen and (min-width: 850px) {
-      .page-content header .page-range {
-        position: absolute;
-        bottom: 0;
-        right: 0; } }
-
-.page-content > .container {
-  padding-top: .875rem;
-  padding-bottom: 0; }
-
-.page-content.illustrated > .container {
-  top: -16rem;
-  padding-top: 2rem;
-  background: #fff; }
+.page-content {
+  position: relative; }
+  .page-content header {
+    position: relative;
+    width: 100%; }
+    .page-content header .container {
+      padding-top: 2rem;
+      padding-bottom: 1rem; }
+    .page-content header h1 {
+      display: inline-block;
+      margin-top: 0;
+      font-size: 3rem; }
+    .page-content header .page-description {
+      font-size: 1.125rem; }
+      @media screen and (min-width: 850px) {
+        .page-content header .page-description {
+          max-width: 66%; } }
+    .page-content header .page-range {
+      margin-bottom: 0; }
+      @media screen and (min-width: 850px) {
+        .page-content header .page-range {
+          position: absolute;
+          bottom: 0;
+          right: 0; } }
+  .page-content > .container {
+    top: 4rem;
+    padding-bottom: 0;
+    background: #fff; }
 
 .page-illustration {
+  position: absolute;
+  width: 100%;
   height: 18rem;
-  margin-top: 0;
+  margin: 0;
   border: 0;
   background-repeat: no-repeat;
   background-position: center center;
@@ -804,7 +853,8 @@ a {
   list-style: none;
   margin-top: 1rem;
   margin-left: -2rem;
-  padding: 0; }
+  padding: 0;
+  text-align: center; }
   .gallery-images li {
     display: inline-block;
     width: calc(100% - 2rem);
@@ -879,10 +929,10 @@ a {
 
 .gridder-close {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: -1px;
+  right: -1px;
   padding: .5rem 1rem;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.8);
   font-size: 1.5rem; }
   @media screen and (min-width: 850px) {
     .gridder-close {
@@ -903,8 +953,12 @@ a {
       margin-left: .25rem;
       font-size: 80%; }
   .gridder-nav.prev {
-    right: 5rem;
+    left: 0;
     text-transform: uppercase; }
+    @media screen and (min-width: 850px) {
+      .gridder-nav.prev {
+        left: auto;
+        right: 5rem; } }
     .gridder-nav.prev:before {
       content: '\25C0';
       display: inline-block;
@@ -926,13 +980,13 @@ a {
           flex-wrap: wrap;
       margin-left: -2rem; } }
   .resources .resource-preview {
-    margin: 1rem 0;
-    border-top: 3px solid #7db6df; }
+    margin: 2rem 0; }
     @media screen and (min-width: 850px) {
       .resources .resource-preview {
-        width: calc(33% - 2rem);
+        width: calc(50% - 2rem);
+        margin-top: 0;
         margin-left: 2rem; } }
     .resources .resource-preview h3 {
       margin-top: .5rem; }
     .resources .resource-preview p {
-      font-size: .875rem; }
+      margin-bottom: 1rem; }
