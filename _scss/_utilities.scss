@@ -42,8 +42,15 @@
   &:after{
     content: '\25b6\25b6\25b6';
     display: inline-block;
-    margin-left: .325rem;
+    margin-left: .25rem;
     font-size: 70%;
     vertical-align: middle;
+    letter-spacing: -.5px;
   }
+}
+
+@mixin page-meta(){
+  margin-bottom: 1rem;
+  font-size: .875rem;
+  color: $dark-grey;
 }

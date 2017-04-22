@@ -439,9 +439,10 @@ a {
   .cta:after {
     content: '\25b6\25b6\25b6';
     display: inline-block;
-    margin-left: .325rem;
+    margin-left: .25rem;
     font-size: 70%;
-    vertical-align: middle; }
+    vertical-align: middle;
+    letter-spacing: -.5px; }
 
 .button {
   display: inline-block;
@@ -699,6 +700,7 @@ a {
       margin-top: 0;
       font-size: 3rem; }
     .page-content header .page-description {
+      margin-bottom: 2rem;
       font-size: 1.125rem; }
       @media screen and (min-width: 850px) {
         .page-content header .page-description {
@@ -710,6 +712,9 @@ a {
           position: absolute;
           bottom: 0;
           right: 0; } }
+    .page-content header img {
+      max-width: 100%;
+      height: auto; }
   .page-content > .container {
     top: 4rem;
     padding-bottom: 0;
@@ -736,9 +741,11 @@ a {
     margin-bottom: 0; }
 
 .section-label {
+  position: absolute;
+  top: -1.5rem;
   display: block;
   margin-bottom: .125rem;
-  font-size: .625rem;
+  font-size: .725rem;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #3087C6; }
@@ -904,6 +911,11 @@ a {
     .content-wrapper .text h2 {
       letter-spacing: 0;
       text-transform: none; }
+  .content-wrapper .share-buttons {
+    position: static; }
+    .content-wrapper .share-buttons .share {
+      margin-left: 0;
+      margin-right: .5rem; }
 
 .gridder-show {
   position: relative;
@@ -971,7 +983,8 @@ a {
 .resources {
   list-style: none;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  margin-top: 2rem; }
   @media screen and (min-width: 850px) {
     .resources {
       display: -ms-flexbox;
@@ -980,13 +993,62 @@ a {
           flex-wrap: wrap;
       margin-left: -2rem; } }
   .resources .resource-preview {
-    margin: 2rem 0; }
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #c2c2c2; }
+    .resources .resource-preview:last-child {
+      border-bottom: 0; }
     @media screen and (min-width: 850px) {
       .resources .resource-preview {
         width: calc(50% - 2rem);
         margin-top: 0;
-        margin-left: 2rem; } }
+        margin-left: 2rem; }
+        .resources .resource-preview:nth-last-child(-n+2) {
+          border-bottom: 0; } }
     .resources .resource-preview h3 {
       margin-top: .5rem; }
     .resources .resource-preview p {
       margin-bottom: 1rem; }
+
+.featured-post {
+  overflow: hidden; }
+  .featured-post .arrow-down {
+    margin-top: 3.5rem; }
+
+@media screen and (min-width: 850px) {
+  .blog-previews {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap; } }
+
+@media screen and (min-width: 850px) {
+  .blog-previews .features {
+    width: 60%; } }
+
+@media screen and (min-width: 850px) {
+  .blog-previews .news {
+    width: calc(40% - 4rem);
+    margin-left: 4rem; } }
+
+.blog-previews .news h3 {
+  font-size: 1.125rem; }
+
+.posts {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.post-preview {
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid #c2c2c2; }
+  .post-preview:last-child {
+    border-bottom: 0; }
+  .post-preview p + .post-meta {
+    margin-top: -1rem; }
+
+.post-meta {
+  margin-bottom: 1rem;
+  font-size: .875rem;
+  color: #9797A4; }

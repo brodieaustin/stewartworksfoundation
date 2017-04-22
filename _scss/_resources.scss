@@ -1,5 +1,6 @@
 .resources{
   @include unstyled-list;
+  margin-top: 2rem;
 
   @media screen and (#{$bp-larger-than-tablet}){
     display: flex;
@@ -9,11 +10,22 @@
 
   .resource-preview{
     margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid darken($light-grey, 20%);
+
+    &:last-child{
+      border-bottom: 0;
+    }
 
     @media screen and (#{$bp-larger-than-tablet}){
       width: calc(50% - 2rem);
       margin-top: 0;
       margin-left: 2rem;
+
+      &:nth-last-child(-n+2){
+        border-bottom: 0;
+      }
+
     }
 
     h3{

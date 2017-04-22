@@ -28,9 +28,7 @@
 }
 
 .article-meta{
-  margin-bottom: 1rem;
-  font-size: .875rem;
-  color: $dark-grey;
+  @include page-meta;
 }
 
 .article-aside{

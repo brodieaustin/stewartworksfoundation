@@ -1,0 +1,58 @@
+.featured-post{
+  overflow: hidden;
+
+  .arrow-down{
+    margin-top: 3.5rem;
+  }
+}
+
+.blog-previews{
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .features{
+
+    @media screen and (#{$bp-larger-than-tablet}){
+      width: 60%;
+    }
+  }
+
+  .news{
+
+      @media screen and (#{$bp-larger-than-tablet}){
+        width: calc(40% - 4rem);
+        margin-left: 4rem;
+      }
+
+    h3{
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.posts{
+  @include unstyled-list;
+}
+
+.post-preview{
+  margin: 2rem 0;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid darken($light-grey, 20%);
+
+  &:last-child{
+    border-bottom: 0;
+  }
+
+  p{
+    &+ .post-meta{
+      margin-top: -1rem;
+    }
+  }
+}
+
+.post-meta{
+  @include page-meta;
+}

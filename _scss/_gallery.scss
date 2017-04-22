@@ -73,4 +73,13 @@
     }
 
   }
+
+  .share-buttons{
+    position: static;
+
+    .share{
+      margin-left: 0;
+      margin-right: .5rem;
+    }
+  }
 }

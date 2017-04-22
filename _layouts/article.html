@@ -15,11 +15,11 @@ layout: base
         <a href="#" class="section-label">{{ page.section }}</a>
       {% endif %}
       <h1>{{ page.title }}</h1>
-      {% if page.description %}
-        <p class="page-description">{{ page.description }}</p>
-      {% endif %}
       {% if page.meta %}
         <p class="article-meta">{{ page.meta }}</p>
+      {% endif %}
+      {% if page.header_img %}
+        <img src="{{ site.baseurl }}/assets/img/{{ page.header_img }}">
       {% endif %}
       {% include share-buttons.html %}
     </header>
