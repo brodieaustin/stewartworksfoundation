@@ -54,7 +54,11 @@
 
 .related-resources{
   li{
-    margin-bottom: .5rem;
+    margin-bottom: .75rem;
     font-size: .875rem;
+  }
+
+  a{
+    text-decoration: underline;
   }
 }
