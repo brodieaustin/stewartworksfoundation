@@ -685,7 +685,8 @@ a {
     left: 2rem;
     font-size: .8125rem;
     font-style: italic;
-    color: #9797A4; }
+    color: #9797A4;
+    z-index: 1000; }
 
 .page-content {
   position: relative; }
