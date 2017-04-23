@@ -91,13 +91,20 @@
 }
 
 .section-content{
-  max-width: 34rem;
-  width: 60%;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    max-width: 34rem;
+    width: 60%;
+  }
 }
 
 .section-aside{
-  width: calc(40% - 4rem);
-  margin-left: 4rem;
+  width: 100%;
+
+  @media screen and (#{$bp-larger-than-tablet}){
+    width: calc(40% - 4rem);
+    margin-left: 4rem;
+  }
 }
 
 .section-label{

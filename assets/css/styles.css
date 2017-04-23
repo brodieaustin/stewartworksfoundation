@@ -747,13 +747,17 @@ a {
   .page-section p:last-child {
     margin-bottom: 0; }
 
-.section-content {
-  max-width: 34rem;
-  width: 60%; }
+@media screen and (min-width: 850px) {
+  .section-content {
+    max-width: 34rem;
+    width: 60%; } }
 
 .section-aside {
-  width: calc(40% - 4rem);
-  margin-left: 4rem; }
+  width: 100%; }
+  @media screen and (min-width: 850px) {
+    .section-aside {
+      width: calc(40% - 4rem);
+      margin-left: 4rem; } }
 
 .section-label {
   position: absolute;
