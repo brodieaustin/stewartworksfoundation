@@ -13,7 +13,6 @@
   max-width: 60%;
   font-family: $primary-font-family;
   font-size: 1.25rem;
-  text-transform: uppercase;
   line-height: 1.2;
   letter-spacing: 1.5px;
   color: $white;
@@ -26,4 +25,11 @@
     width: 100%;
     height: auto;
   }
+}
+
+@keyframes hideshow {
+  0% { opacity: 1; }
+  10% { opacity: 1; }
+  15% { opacity: 0; }
+  100% { opacity: 0; }
 }
