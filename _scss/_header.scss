@@ -27,9 +27,15 @@
   }
 }
 
-@keyframes hideshow {
-  0% { opacity: 1; }
-  10% { opacity: 1; }
-  15% { opacity: 0; }
-  100% { opacity: 0; }
+#logo-block{
+  animation: swipe 1s .25s ease-in forwards;
+}
+
+@keyframes swipe {
+  from{
+    transform: translateX(0);
+  }
+  to{
+    transform: translateX(-100%);
+  }
 }
