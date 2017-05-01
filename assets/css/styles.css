@@ -486,7 +486,8 @@ a {
       padding-right: 6rem; } }
 
 .site-header {
-  padding: 1rem 2rem; }
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(245, 245, 245, 0.5); }
   .site-header .container {
     margin-top: 0; }
 
